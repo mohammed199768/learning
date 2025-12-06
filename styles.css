@@ -404,13 +404,21 @@ ul {
     padding: 40px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     overflow-x: auto;
+    /* Enable horizontal scroll on small screens */
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .pricing-table {
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
+    /* Ensure table keeps its structure */
 }
+
+/* ... existing table styles ... */
+
+
 
 .pricing-table th,
 .pricing-table td {
@@ -666,31 +674,181 @@ footer {
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        /* Can implement mobile menu if needed, creating simple stack for now */
-    }
-
-    .logo {
-        margin: 0 auto;
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2rem;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .tech-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .tech-visual {
-        order: -1;
-        /* Show image first on mobile usually looks better or worse depending on design. Keeping text first might be better here */
-        order: 1;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-bottom: 5px;
+    }
+
+    .logo img {
+        height: 60px;
+        /* Smaller logo on mobile */
+        margin: -10px -10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .diagram-card {
+        padding: 20px;
+        width: 100%;
     }
 
     .d-split {
-        gap: 50px;
+        gap: 30px;
+    }
+
+    .d-node {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .links-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-link {
+        min-height: 0;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    /* Pricing Table Mobile Transformation (Card View) */
+    .pricing-table {
+        min-width: 0;
+        /* Override min-width */
+        display: block;
+    }
+
+    .pricing-table thead {
+        display: none;
+    }
+
+    .pricing-table tbody,
+    .pricing-table tfoot,
+    .pricing-table tr,
+    .pricing-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .pricing-table tr {
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .pricing-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: left;
+        /* Alignment for content */
+    }
+
+    .pricing-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Labels for body rows */
+    .pricing-table tbody td:nth-of-type(1)::before {
+        content: "الخدمة";
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .pricing-table tbody td:nth-of-type(2)::before {
+        content: "التكلفة";
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .pricing-table tbody td:nth-of-type(3)::before {
+        content: "ملاحظات";
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    /* Footer adjustments */
+    .pricing-table tfoot tr {
+        background: rgba(99, 102, 241, 0.05);
+        border-color: var(--primary-color);
+    }
+
+    .pricing-table tfoot td {
+        border: none;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+
+    .features-section .container,
+    .pricing-section .container {
+        padding: 0 15px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
     }
 }
