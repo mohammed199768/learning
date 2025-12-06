@@ -115,10 +115,16 @@ ul {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: var(--primary-color);
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    /* Increased to compensate for image padding */
+    margin: -20px -20px;
+    /* Negative margin to fit navbar */
+    width: auto;
 }
 
 .nav-links {
@@ -204,8 +210,31 @@ ul {
     line-height: 1.2;
 }
 
+@keyframes textPulse {
+    0% {
+        color: var(--accent-color);
+        text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+        transform: scale(1);
+    }
+
+    50% {
+        color: #34d399;
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.8), 0 0 10px rgba(16, 185, 129, 0.4);
+        transform: scale(1.05);
+        /* Slight breathing movement */
+    }
+
+    100% {
+        color: var(--accent-color);
+        text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+        transform: scale(1);
+    }
+}
+
 .hero .highlight {
     color: var(--accent-color);
+    display: inline-block;
+    animation: textPulse 3s infinite ease-in-out;
 }
 
 .hero .subtitle {
