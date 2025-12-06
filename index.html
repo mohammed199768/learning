@@ -54,7 +54,7 @@
                     <p>نقدم بنية تحتية حديثة تعتمد على خدمات سحابية متخصصة لضمان السرعة والأمان بأقل تكلفة ممكنة.</p>
                     <ul class="tech-list">
                         <li>
-                            <span class="icon">🖥️</span>
+                            <span class="icon"></span>
                             <div>
                                 <strong>الواجهة الأمامية (Frontend)</strong>
                                 <p>واجهة الطالب وواجهة الإدارة مبنية بـ Next.js ومستضافة على Vercel لسرعة تحميل فائقة.
@@ -62,28 +62,28 @@
                             </div>
                         </li>
                         <li>
-                            <span class="icon">⚙️</span>
+                            <span class="icon"></span>
                             <div>
                                 <strong>الخادم والباك اند (Backend)</strong>
                                 <p>خادم Node.js مع Prisma و Socket.io مستضاف على Railway لأداء مستقر.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="icon">🗄️</span>
+                            <span class="icon"></span>
                             <div>
                                 <strong>قاعدة البيانات (Database)</strong>
                                 <p>PostgreSQL مدارة بالكامل + Redis للكاش والشات عبر Railway/Upstash.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="icon">🎬</span>
+                            <span class="icon"></span>
                             <div>
                                 <strong>بث الفيديو (Streaming)</strong>
                                 <p>تخزين وبث آمن ومشفر للفيديوهات عبر شبكة BunnyCDN العالمية.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="icon">🛡️</span>
+                            <span class="icon"></span>
                             <div>
                                 <strong>الحماية والأمان (Security)</strong>
                                 <p>حماية DNS وتسريع المحتوى عبر Cloudflare.</p>
@@ -94,17 +94,17 @@
                 <div class="tech-visual fade-in-left">
                     <div class="diagram-card">
                         <div class="d-node user">الطالب</div>
-                        <div class="d-arrow">⬇️</div>
+                        <div class="d-arrow"></div>
                         <div class="d-node cloudflare">Cloudflare</div>
                         <div class="d-split">
-                            <div class="d-arrow">↙️</div>
-                            <div class="d-arrow">↘️</div>
+                            <div class="d-arrow"></div>
+                            <div class="d-arrow"></div>
                         </div>
                         <div class="d-row">
                             <div class="d-node vercel">Vercel (Frontend)</div>
                             <div class="d-node bunny">Bunny (Video)</div>
                         </div>
-                        <div class="d-arrow">⬇️ API</div>
+                        <div class="d-arrow"> API</div>
                         <div class="d-node railway">Railway (Backend & DB)</div>
                     </div>
                 </div>
@@ -146,17 +146,16 @@
                             <td class="price">≈ 2 $</td>
                             <td>متوسط تكلفة الدومين السنوية مقسمة شهرياً</td>
                         </tr>
-                        <tr>
-                            <td>خدمة البريد الإلكتروني (اختياري)</td>
-                            <td class="price">0 – 20 $</td>
-                            <td>مثل Resend أو Brevo (مجاني حتى عدد معين)</td>
-                        </tr>
-                    </tbody>
                     <tfoot>
-                        <tr>
-                            <td><strong>الإجمالي التقريبي</strong></td>
-                            <td class="total-price">122 – 179 $</td>
-                            <td><strong>(حوالي 90 – 125 دينار أردني)</strong></td>
+                        <tr class="total-row">
+                            <td><strong>الإجمالي المتوقع (شهرياً)</strong></td>
+                            <td class="total-price">122 $ – 179 $</td>
+                            <td>نفقات تشغيلية شهرية (OpEx)</td>
+                        </tr>
+                        <tr class="total-row yearly">
+                            <td><strong>الإجمالي المتوقع (سنوياً)</strong></td>
+                            <td class="total-price">1,465 $ – 2,150 $</td>
+                            <td>حسب الاستهلاك السنوي التقريبي</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -174,27 +173,27 @@
             <h2 class="section-title">لماذا هذه الخطة قوية؟</h2>
             <div class="cards-grid">
                 <div class="feature-card stagger-card">
-                    <div class="f-icon">💰</div>
+                    <div class="f-icon"></div>
                     <h3>توفير هائل</h3>
                     <p>توفير في التكاليف يصل حتى 65% مقارنة بحلول مثل AWS أو Vimeo Enterprise.</p>
                 </div>
                 <div class="feature-card stagger-card">
-                    <div class="f-icon">📈</div>
+                    <div class="f-icon"></div>
                     <h3>قابلية التوسع</h3>
                     <p>البنية مهيئة لدعم آلاف الطلاب فوراً دون الحاجة لإعادة هندسة النظام.</p>
                 </div>
                 <div class="feature-card stagger-card">
-                    <div class="f-icon">🔒</div>
+                    <div class="f-icon"></div>
                     <h3>حماية المحتوى</h3>
                     <p>حماية متقدمة للفيديوهات تمنع التحميل المباشر وتضمن حفظ حقوق الملكية.</p>
                 </div>
                 <div class="feature-card stagger-card">
-                    <div class="f-icon">🚀</div>
+                    <div class="f-icon"></div>
                     <h3>إدارة سهلة (Managed)</h3>
                     <p>لا حاجة لمهندس DevOps. السيرفرات وقواعد البيانات مدارة بالكامل (Serverless/PaaS).</p>
                 </div>
                 <div class="feature-card stagger-card">
-                    <div class="f-icon">💳</div>
+                    <div class="f-icon"></div>
                     <h3>دفع مرن</h3>
                     <p>تكامل جاهز وسلس مع بوابات الدفع العالمية مثل Stripe أو المحلية مستقبلاً.</p>
                 </div>
