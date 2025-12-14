@@ -56,38 +56,36 @@
                         <li>
                             <span class="icon"></span>
                             <div>
-                                <strong>الواجهة الأمامية (Frontend)</strong>
-                                <p>واجهة الطالب وواجهة الإدارة مبنية بـ Next.js ومستضافة على Cloudflare Pages لسرعة
-                                    تحميل فائقة.
-                                </p>
+                                <strong>استضافة الواجهة الأمامية (Frontend) على VPS عبر Nginx</strong>
+                                <p>استضافة ملفات الواجهة (Static Build) على خادم افتراضي خاص (VPS) يدار بواسطة Nginx لتقليل التكاليف.</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"></span>
                             <div>
-                                <strong>الخادم والباك اند (Backend)</strong>
-                                <p>خادم Node.js مع Prisma و Socket.io مستضاف على Railway لأداء مستقر.</p>
+                                <strong>Railway: Node.js API + Prisma + Socket.io</strong>
+                                <p>استضافة الباك اند بالكامل مع دعم الوقت الحقيقي (Real-time) في بيئة مدارة.</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"></span>
                             <div>
-                                <strong>قاعدة البيانات (Database)</strong>
-                                <p>PostgreSQL مدارة بالكامل + Redis للكاش والشات عبر Railway/Upstash.</p>
+                                <strong>قاعدة البيانات (Railway PostgreSQL + Redis)</strong>
+                                <p>قاعدة بيانات علائقية قوية بالإضافة إلى Redis للكاش وإدارة الجلسات (Managed).</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"></span>
                             <div>
-                                <strong>بث الفيديو (Streaming)</strong>
-                                <p>تخزين وبث آمن ومشفر للفيديوهات عبر شبكة BunnyCDN العالمية.</p>
+                                <strong>Bunny Stream: Video hosting + streaming</strong>
+                                <p>استضافة وبث الفيديو عبر شبكة CDN عالمية لضمان عدم تقطيع وتشغيل سريع.</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"></span>
                             <div>
-                                <strong>الحماية والأمان (Security)</strong>
-                                <p>حماية DNS وتسريع المحتوى عبر Cloudflare.</p>
+                                <strong>Cloudflare: DNS + SSL + DDoS protection</strong>
+                                <p>طبقة حماية إضافية وإدارة DNS وتشفير SSL مجاني (موصى به).</p>
                             </div>
                         </li>
                     </ul>
@@ -96,14 +94,13 @@
                     <div class="diagram-card">
                         <div class="d-node user">الطالب</div>
                         <div class="d-arrow">⬇️</div>
-                        <div class="d-node cloudflare">Cloudflare</div>
+                        <div class="d-node cloudflare">Cloudflare (DNS/SSL)</div>
                         <div class="d-split">
                             <div class="d-arrow">↙️</div>
                             <div class="d-arrow">↘️</div>
                         </div>
                         <div class="d-row">
-                            <div class="d-node vercel" style="background: #f48120; border-color: #f48120;">Cloudflare
-                                Pages (Frontend)</div>
+                            <div class="d-node vps">VPS + Nginx (Frontend)</div>
                             <div class="d-node bunny">Bunny (Video)</div>
                         </div>
                         <div class="d-arrow">⬇️ API</div>
@@ -117,10 +114,11 @@
     <!-- Section 3: Pricing -->
     <section id="pricing" class="section pricing-section">
         <div class="container">
-            <h2 class="section-title">التكاليف الشهرية التقديرية</h2>
+            <h2 class="section-title">التكاليف الشهرية التقديرية (100 طالب)</h2>
             <div class="table-wrapper fade-in-up">
+                
                 <!-- Monthly Table -->
-                <div class="pricing-table-header">التكاليف الشهرية (100 طالب)</div>
+                <div class="pricing-table-header">التكاليف الشهرية</div>
                 <table class="pricing-table">
                     <thead>
                         <tr>
@@ -135,7 +133,7 @@
                             <td class="price">17.5 $</td>
                             <td>
                                 تخزين 1TB (10$) + 750GB باندويث (7.5$)
-                                <span class="calc-note">750GB = 100 students * 5 hrs * 1.5GB/hr</span>
+                                <span class="calc-note">حساب الترافيك: 100 طالب × 5 ساعات × 1.5GB = 750GB شهريًا</span>
                             </td>
                         </tr>
                         <tr>
@@ -144,9 +142,9 @@
                             <td>باقة تقديرية (Backend + DB + Redis)</td>
                         </tr>
                         <tr>
-                            <td>استضافة الواجهات (Cloudflare Pages)</td>
-                            <td class="price">0 $</td>
-                            <td>استضافة مجانية للواجهة الأمامية مع CDN و SSL</td>
+                            <td>استضافة الواجهة (VPS + Nginx)</td>
+                            <td class="price">5 $</td>
+                            <td>خادم Linux صغير لاستضافة الملفات الثابتة</td>
                         </tr>
                         <tr>
                             <td>اسم النطاق (Domain) و DNS</td>
@@ -157,7 +155,7 @@
                     <tfoot>
                         <tr class="total-row">
                             <td><strong>الإجمالي (شهرياً)</strong></td>
-                            <td class="total-price">36.5 $</td>
+                            <td class="total-price">41.5 $</td>
                             <td>التكلفة التشغيلية الشهرية المتوقعة</td>
                         </tr>
                     </tfoot>
@@ -185,9 +183,9 @@
                             <td>17$ × 12 شهر</td>
                         </tr>
                         <tr>
-                            <td>استضافة الواجهات (Cloudflare Pages)</td>
-                            <td class="price">0 $</td>
-                            <td>مجاني</td>
+                            <td>استضافة الواجهة (VPS + Nginx)</td>
+                            <td class="price">60 $</td>
+                            <td>5$ × 12 شهر</td>
                         </tr>
                         <tr>
                             <td>اسم النطاق (Domain) و DNS</td>
@@ -198,8 +196,8 @@
                     <tfoot>
                         <tr class="total-row yearly">
                             <td><strong>الإجمالي (سنوياً)</strong></td>
-                            <td class="total-price">438 $</td>
-                            <td>≈ 310 JOD (حسب سعر الصرف الحالي)</td>
+                            <td class="total-price">498 $</td>
+                            <td>تكلفة السنة كاملة</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -235,7 +233,7 @@
                 <div class="feature-card stagger-card">
                     <div class="f-icon"></div>
                     <h3>إدارة سهلة (Managed)</h3>
-                    <p>لا حاجة لمهندس DevOps. السيرفرات وقواعد البيانات مدارة بالكامل (Serverless/PaaS).</p>
+                    <p>الباك اند وقواعد البيانات مدارة بالكامل (Railway) مما يقلل عبء الصيانة.</p>
                 </div>
                 <div class="feature-card stagger-card">
                     <div class="f-icon"></div>
@@ -267,12 +265,12 @@
                         <span class="s-desc">سحابة حديثة للباك اند والداتابيز</span>
                     </div>
                 </a>
-                <a href="https://pages.cloudflare.com" target="_blank" rel="noopener noreferrer"
-                    class="service-link card-cf-pages">
+                <a href="https://www.hetzner.com/cloud" target="_blank" rel="noopener noreferrer"
+                    class="service-link card-vps">
                     <div class="card-img"></div>
                     <div class="card-content">
-                        <span class="s-name">Cloudflare Pages</span>
-                        <span class="s-desc">استضافة مجانية فائقة السرعة للواجهة الأمامية</span>
+                        <span class="s-name">VPS + Nginx</span>
+                        <span class="s-desc">استضافة الواجهة الأمامية على خادم خاص بتكلفة منخفضة</span>
                     </div>
                 </a>
                 <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" class="service-link card-stripe">

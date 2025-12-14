@@ -374,9 +374,10 @@ ul {
     background: #f97316;
 }
 
-.vercel {
-    background: #000;
-    border: 1px solid #333;
+/* REPLACED: .vercel with .vps */
+.vps {
+    background: #10b981; /* Green accent */
+    border: 1px solid #059669;
 }
 
 .bunny {
@@ -415,10 +416,6 @@ ul {
     min-width: 600px;
     /* Ensure table keeps its structure */
 }
-
-/* ... existing table styles ... */
-
-
 
 .pricing-table th,
 .pricing-table td {
@@ -540,8 +537,6 @@ ul {
 
 /* Links Cards Section */
 
-/* .video-container removed */
-
 .links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -598,9 +593,10 @@ ul {
     /* Servers/Data Center */
 }
 
-.card-cf-pages .card-img {
-    background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop');
-    /* Data/Speed/Frontend */
+/* REPLACED: .card-cf-pages with .card-vps */
+.card-vps .card-img {
+    background-image: url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1600&auto=format&fit=crop');
+    /* Server/Cloud Tech */
 }
 
 .pricing-table-header {
@@ -801,84 +797,53 @@ footer {
 
     .pricing-table thead {
         display: none;
+        /* Hide headers on small screens */
     }
 
-    .pricing-table tbody,
-    .pricing-table tfoot,
-    .pricing-table tr,
-    .pricing-table td {
+    .pricing-table tbody tr {
         display: block;
-        width: 100%;
-    }
-
-    .pricing-table tr {
-        margin-bottom: 20px;
         background: rgba(255, 255, 255, 0.05);
+        margin-bottom: 20px;
         border-radius: 12px;
         padding: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .pricing-table td {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        text-align: right;
         padding: 10px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        text-align: left;
-        /* Alignment for content */
     }
 
     .pricing-table td:last-child {
         border-bottom: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 
-    /* Labels for body rows */
-    .pricing-table tbody td:nth-of-type(1)::before {
-        content: "الخدمة";
+    .pricing-table td::before {
+        content: attr(data-label);
         font-weight: bold;
         color: var(--primary-color);
+        display: block;
+        margin-left: 10px;
     }
 
-    .pricing-table tbody td:nth-of-type(2)::before {
-        content: "التكلفة";
-        font-weight: bold;
-        color: var(--primary-color);
-    }
-
-    .pricing-table tbody td:nth-of-type(3)::before {
-        content: "ملاحظات";
-        font-weight: bold;
-        color: var(--primary-color);
-    }
-
-    /* Footer adjustments */
-    .pricing-table tfoot tr {
-        background: rgba(99, 102, 241, 0.05);
-        border-color: var(--primary-color);
+    .pricing-table tfoot .total-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(99, 102, 241, 0.1);
+        border-radius: 12px;
+        padding: 20px;
     }
 
     .pricing-table tfoot td {
         border: none;
-        padding: 5px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 0.85rem;
-    }
-
-    .features-section .container,
-    .pricing-section .container {
-        padding: 0 15px;
-    }
-
-    .cards-grid {
-        grid-template-columns: 1fr;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
     }
 }
