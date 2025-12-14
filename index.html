@@ -57,7 +57,8 @@
                             <span class="icon"></span>
                             <div>
                                 <strong>الواجهة الأمامية (Frontend)</strong>
-                                <p>واجهة الطالب وواجهة الإدارة مبنية بـ Next.js ومستضافة على Vercel لسرعة تحميل فائقة.
+                                <p>واجهة الطالب وواجهة الإدارة مبنية بـ Next.js ومستضافة على Cloudflare Pages لسرعة
+                                    تحميل فائقة.
                                 </p>
                             </div>
                         </li>
@@ -101,7 +102,8 @@
                             <div class="d-arrow">↘️</div>
                         </div>
                         <div class="d-row">
-                            <div class="d-node vercel">Vercel (Frontend)</div>
+                            <div class="d-node vercel" style="background: #f48120; border-color: #f48120;">Cloudflare
+                                Pages (Frontend)</div>
                             <div class="d-node bunny">Bunny (Video)</div>
                         </div>
                         <div class="d-arrow">⬇️ API</div>
@@ -117,6 +119,8 @@
         <div class="container">
             <h2 class="section-title">التكاليف الشهرية التقديرية</h2>
             <div class="table-wrapper fade-in-up">
+                <!-- Monthly Table -->
+                <div class="pricing-table-header">التكاليف الشهرية (100 طالب)</div>
                 <table class="pricing-table">
                     <thead>
                         <tr>
@@ -128,41 +132,82 @@
                     <tbody>
                         <tr>
                             <td>استضافة الفيديو (Bunny Stream)</td>
-                            <td class="price">85 – 130 $</td>
-                            <td>تخزين 1 تيرابايت + تدفق تقريباً 7.5 تيرابايت شهرياً (1000 طالب)</td>
+                            <td class="price">17.5 $</td>
+                            <td>
+                                تخزين 1TB (10$) + 750GB باندويث (7.5$)
+                                <span class="calc-note">750GB = 100 students * 5 hrs * 1.5GB/hr</span>
+                            </td>
                         </tr>
                         <tr>
                             <td>الخادم وقاعدة البيانات (Railway)</td>
-                            <td class="price">15 – 27 $</td>
-                            <td>يشمل Node.js + PostgreSQL المدارة + Redis</td>
+                            <td class="price">17 $</td>
+                            <td>باقة تقديرية (Backend + DB + Redis)</td>
                         </tr>
                         <tr>
-                            <td>استضافة الواجهات (Vercel Pro)</td>
-                            <td class="price">20 $</td>
-                            <td>حساب مطور واحد (Team Member) مع ترافيك عالي</td>
+                            <td>استضافة الواجهات (Cloudflare Pages)</td>
+                            <td class="price">0 $</td>
+                            <td>استضافة مجانية للواجهة الأمامية مع CDN و SSL</td>
                         </tr>
                         <tr>
                             <td>اسم النطاق (Domain) و DNS</td>
-                            <td class="price">≈ 2 $</td>
-                            <td>متوسط تكلفة الدومين السنوية مقسمة شهرياً</td>
+                            <td class="price">2 $</td>
+                            <td>متوسط تكلفة الدومين شهرياً</td>
                         </tr>
+                    </tbody>
                     <tfoot>
                         <tr class="total-row">
-                            <td><strong>الإجمالي المتوقع (شهرياً)</strong></td>
-                            <td class="total-price">122 $ – 179 $</td>
-                            <td>نفقات تشغيلية شهرية (OpEx)</td>
+                            <td><strong>الإجمالي (شهرياً)</strong></td>
+                            <td class="total-price">36.5 $</td>
+                            <td>التكلفة التشغيلية الشهرية المتوقعة</td>
                         </tr>
+                    </tfoot>
+                </table>
+
+                <!-- Yearly Table -->
+                <div class="pricing-table-header">التكاليف السنوية</div>
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>الخدمة</th>
+                            <th>التكلفة السنوية</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>استضافة الفيديو (Bunny Stream)</td>
+                            <td class="price">210 $</td>
+                            <td>17.5$ × 12 شهر</td>
+                        </tr>
+                        <tr>
+                            <td>الخادم وقاعدة البيانات (Railway)</td>
+                            <td class="price">204 $</td>
+                            <td>17$ × 12 شهر</td>
+                        </tr>
+                        <tr>
+                            <td>استضافة الواجهات (Cloudflare Pages)</td>
+                            <td class="price">0 $</td>
+                            <td>مجاني</td>
+                        </tr>
+                        <tr>
+                            <td>اسم النطاق (Domain) و DNS</td>
+                            <td class="price">24 $</td>
+                            <td>تجديد سنوي (تقريبي)</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
                         <tr class="total-row yearly">
-                            <td><strong>الإجمالي المتوقع (سنوياً)</strong></td>
-                            <td class="total-price">1,465 $ – 2,150 $</td>
-                            <td>حسب الاستهلاك السنوي التقريبي</td>
+                            <td><strong>الإجمالي (سنوياً)</strong></td>
+                            <td class="total-price">438 $</td>
+                            <td>≈ 310 JOD (حسب سعر الصرف الحالي)</td>
                         </tr>
                     </tfoot>
                 </table>
             </div>
             <p class="pricing-note">
-                💡 ملاحظة هامة: الجزء الأكبر من التكلفة هو استهلاك الفيديو، وهو يزداد فقط بزيادة عدد الطلاب والمشاهدات،
-                مما يعني أن ارتفاع التكلفة مرتبط مباشرة بزيادة الأرباح والنجاح.
+                💡 ملاحظة هامة: التكلفة المتغيرة الأساسية هي "باندويث الفيديو" (Video Bandwidth)، وهي تزداد طردياً فقط
+                بزيادة عدد الطلاب والمشاهدات.
+                باقي التكاليف (Frontend, Backend, DB) شبه ثابتة لهذه الأعداد.
             </p>
         </div>
     </section>
@@ -222,11 +267,12 @@
                         <span class="s-desc">سحابة حديثة للباك اند والداتابيز</span>
                     </div>
                 </a>
-                <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="service-link card-vercel">
+                <a href="https://pages.cloudflare.com" target="_blank" rel="noopener noreferrer"
+                    class="service-link card-cf-pages">
                     <div class="card-img"></div>
                     <div class="card-content">
-                        <span class="s-name">Vercel</span>
-                        <span class="s-desc">استضافة عالمية لتطبيقات Next.js</span>
+                        <span class="s-name">Cloudflare Pages</span>
+                        <span class="s-desc">استضافة مجانية فائقة السرعة للواجهة الأمامية</span>
                     </div>
                 </a>
                 <a href="https://stripe.com" target="_blank" rel="noopener noreferrer" class="service-link card-stripe">

@@ -598,9 +598,39 @@ ul {
     /* Servers/Data Center */
 }
 
-.card-vercel .card-img {
-    background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1600&auto=format&fit=crop');
-    /* Code/Frontend */
+.card-cf-pages .card-img {
+    background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop');
+    /* Data/Speed/Frontend */
+}
+
+.pricing-table-header {
+    color: var(--text-light);
+    margin: 40px 0 20px 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-table-header::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 25px;
+    background: var(--accent-color);
+    border-radius: 5px;
+}
+
+.calc-note {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 5px;
+    direction: ltr;
+    /* Ensure math numbers display correctly */
+    text-align: right;
+    unicode-bidi: embed;
 }
 
 .card-stripe .card-img {
